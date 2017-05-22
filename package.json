@@ -1,0 +1,49 @@
+{
+  "name": "html-minimal-starter-kit",
+  "version": "0.1.0",
+  "description": "minimal multipage html boilerplate with live reload",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env ENV=development node ./dev.server.js",
+    "build": "cross-env NODE_ENV=production webpack --config=webpack.production.config.js --progress --profile --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jith/html-minimal-starter-kit.git"
+  },
+  "keywords": [
+    "minimal",
+    "multipage",
+    "html",
+    "boilerplate",
+    "webpack",
+    "live",
+    "reload"
+  ],
+  "author": "sreejith k",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jith/html-minimal-starter-kit/issues"
+  },
+  "homepage": "https://github.com/jith/html-minimal-starter-kit#readme",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^5.0.0",
+    "css-loader": "^0.28.1",
+    "eslint": "^3.19.0",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "^2.28.0",
+    "reload-html-webpack-plugin": "^0.1.2",
+    "style-loader": "^0.17.0",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "normalize.css": "^7.0.0"
+  }
+}
