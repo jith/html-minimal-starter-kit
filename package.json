@@ -1,6 +1,6 @@
 {
   "name": "html-minimal-starter-kit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "minimal multipage html boilerplate with live reload",
   "main": "index.js",
   "scripts": {
