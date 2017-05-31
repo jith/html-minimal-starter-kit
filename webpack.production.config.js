@@ -20,6 +20,9 @@ var config = {
     filename: 'build/[name].bundle.js',
     publicPath: './'
   },
+  externals: {
+    "jquery": "jQuery"
+  },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       name: "global",
@@ -54,7 +57,13 @@ var config = {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
-          use: "css-loader?minimize=true"
+          use: {
+            loader: "css-loader",
+            options: {
+              url: false,
+              minimize: true
+            }
+          },
         })
       }
     ]

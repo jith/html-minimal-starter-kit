@@ -21,6 +21,9 @@ var config = {
   output: {
     filename: 'build/[name].bundle.js'
   },
+  externals: {
+    "jquery": "jQuery"
+  },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       name: "global"
@@ -42,7 +45,18 @@ var config = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader",
+            options: {
+              url: false,
+              sourceMap: true
+            }
+          },
+        ]
       }
     ]
   },
